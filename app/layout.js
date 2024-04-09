@@ -192,7 +192,7 @@ export default function RootLayout({ ...props }) {
             </div>
             <p className="text-4xl font-bold text-opacity-90">{Bio.title}</p>
             <p className="flex text-xl font-bold text-opacity-90">
-              I'm a &nbsp;
+              I'm a
               <TypeWriter data={typeWriter} />
             </p>
             <p className="text-base font-bold text-opacity-90">
