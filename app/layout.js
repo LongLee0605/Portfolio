@@ -7,7 +7,7 @@ const inter = Nunito({ subsets: ["latin"] });
 
 // data
 const Bio = {
-  title: "Hello, I'am D.Long",
+  title: "Hello, I am D.Long",
   roles: ["FrontEnd Developer", "Wordpress Developer"],
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
@@ -192,7 +192,7 @@ export default function RootLayout({ ...props }) {
             </div>
             <p className="text-4xl font-bold text-opacity-90">{Bio.title}</p>
             <p className="flex text-xl font-bold text-opacity-90">
-              I'm a
+              I am a
               <TypeWriter data={typeWriter} />
             </p>
             <p className="text-base font-bold text-opacity-90">
