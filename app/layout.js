@@ -86,8 +86,8 @@ const Skills = {
       title: "CSS",
     },
     {
-      img: "../Javascript.svg",
-      title: "Javascript",
+      img: "../JavaScript.svg",
+      title: "JavaScript",
     },
     {
       img: "../Bootstrap.svg",
@@ -192,7 +192,7 @@ export default function RootLayout({ ...props }) {
             </div>
             <p className="text-4xl font-bold text-opacity-90">{Bio.title}</p>
             <p className="flex text-xl font-bold text-opacity-90">
-              I am a
+              I am a  &nbsp;
               <TypeWriter data={typeWriter} />
             </p>
             <p className="text-base font-bold text-opacity-90">
