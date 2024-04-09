@@ -1,6 +1,6 @@
 "use client";
 import { Nunito } from "next/font/google";
-import Typewriter from "typewriter-effect";
+// import Typewriter from "typewriter-effect";
 import HeroBgAnimation from "./components/AnimationBG";
 import "./globals.css";
 const inter = Nunito({ subsets: ["latin"] });
@@ -176,7 +176,6 @@ const Skills = {
   ],
 };
 export default function RootLayout({ ...props }) {
-  console.log(Skills.fronend);
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -193,15 +192,13 @@ export default function RootLayout({ ...props }) {
             <p className="text-4xl font-bold text-opacity-90">{Bio.title}</p>
             <p className="flex text-xl font-bold text-opacity-90">
               I'm a &nbsp;
-              <p className="text-[#854CE6]">
-                <Typewriter
-                  options={{
-                    strings: Bio.roles,
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </p>
+              {/* <Typewriter
+                options={{
+                  strings: Bio.roles,
+                  autoStart: true,
+                  loop: true,
+                }}
+              /> */}
             </p>
             <p className="text-base font-bold text-opacity-90">
               I am a motivated and versatile individual, always eager to take on
