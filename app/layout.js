@@ -9,7 +9,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { Nunito } from "next/font/google";
 import HeroBgAnimation from "./components/AnimationBG";
 import TypeWriter from "./components/TypeWriter";
-import { Bio, Skills, experiences } from "./data";
+import { Bio, Skills, experiences, projects } from "./data";
 import "./globals.css";
 const inter = Nunito({ subsets: ["latin"] });
 
@@ -81,7 +81,7 @@ export default function RootLayout({ ...props }) {
                 the past 2 years.
               </p>
               <div className="flex gap-10 justify-between ">
-                <div className="shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-1/2 ">
+                <div className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-1/2 ">
                   <p className="text-xl font-bold text-center pb-4">FrontEnd</p>
                   <div className="flex gap-3 flex-wrap justify-center">
                     {Skills?.frontend.map((item) => {
@@ -97,7 +97,7 @@ export default function RootLayout({ ...props }) {
                     })}
                   </div>
                 </div>
-                <div className="shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-1/2 ">
+                <div className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-1/2 ">
                   <p className="text-xl font-bold text-center pb-4">BackEnd</p>
                   <div className="flex gap-3 flex-wrap justify-center">
                     {Skills?.backend.map((item) => {
@@ -114,7 +114,7 @@ export default function RootLayout({ ...props }) {
                   </div>
                 </div>
               </div>
-              <div className="mt-10 shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-1/2 ">
+              <div className="mt-10 shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-1/2 ">
                 <p className="text-xl font-bold text-center pb-4">Orther</p>
                 <div className="flex gap-3 flex-wrap justify-center">
                   {Skills?.orther.map((item) => {
@@ -165,7 +165,7 @@ export default function RootLayout({ ...props }) {
                       </TimelineSeparator>
                       <TimelineContent sx={{ py: "28px", px: 2 }}>
                         <div
-                          className="rounded-xl shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] border-[#844ce696] p-6 justify-between
+                          className="rounded-xl shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] border-[#844ce696] p-6 justify-between
                       flex relative flex-col gap-4 overflow-hidden"
                         >
                           <div className="w-full flex gap-4 items-center">
@@ -216,8 +216,54 @@ export default function RootLayout({ ...props }) {
                 })}
               </Timeline>
             </div>
-            <div id="project" className="h-[1000px]">
-              ákdad
+            <div id="project" className="text-center px-5 py-10">
+              <p
+                className="
+              text-3xl font-bold"
+              >
+                PROJECT
+              </p>
+              <p
+                className="
+              text-lg font-bold pt-4 pb-8"
+              >
+                I have worked on a wide range of projects. Here are some of my
+                projects.
+              </p>
+              <div className="flex gap-10 flex-wrap">
+                {projects?.map((item, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="group w-[330px] cursor-pointer rounded-lg shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] overflow-hidden p-6 flex flex-wrap gap-8 hover:-translate-y-3 brightness-110 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)]"
+                    >
+                      <img
+                        src={item?.image}
+                        className="w-full h-40 object-cover"
+                      />
+                      <div className="w-full flex items-center flex-wrap gap-2 mt-2 h-12 justify-center">
+                        {item?.tags?.map((tag) => (
+                          <p className="text-xs py-1 px-2 text-[#854ce6] bg-[#854ce615] rounded-lg ">
+                            {tag}
+                          </p>
+                        ))}
+                      </div>
+                      <div className="w-full flex flex-col">
+                        <p className="text-xl font-semibold text-[#b1b2b3] line-clamp-2">
+                          {item?.title}
+                        </p>
+                        <p className="text-xs text-[#b1b2b380]">{item?.date}</p>
+                        <p className="mt-2 line-clamp-3 text-[#b1b2b399]">
+                          {item?.description}
+                        </p>
+                      </div>
+                      <a href={item?.webapp} className="px-6 py-4 text-[#b1b2b399] group-hover:text-white">
+                        View Website
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
