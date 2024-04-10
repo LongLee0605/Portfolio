@@ -149,7 +149,10 @@ export default function RootLayout({ ...props }) {
                 {experiences.map((item, index) => {
                   return (
                     <TimelineItem key={index}>
-                      <TimelineOppositeContent color="text-white" className="mt-6">
+                      <TimelineOppositeContent
+                        color="text-white"
+                        className="mt-6"
+                      >
                         {item.date}
                       </TimelineOppositeContent>
                       <TimelineSeparator>
@@ -192,11 +195,16 @@ export default function RootLayout({ ...props }) {
                               <div className="flex gap-2">
                                 <b className="text-[#f2f3f499]">Skills:</b>
                                 <div className="flex flex-wrap gap-2">
-                                  {item?.skills?.map((skill, index) => (
-                                    <p className="text-[#f2f3f499]">
-                                      • {skill}
-                                    </p>
-                                  ))}
+                                  {item?.skills?.map((skill, index) => {
+                                    return (
+                                      <p
+                                        key={index}
+                                        className="text-[#f2f3f499]"
+                                      >
+                                        • {skill}
+                                      </p>
+                                    );
+                                  })}
                                 </div>
                               </div>
                             </>
