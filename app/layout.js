@@ -230,20 +230,23 @@ export default function RootLayout({ ...props }) {
                 I have worked on a wide range of projects. Here are some of my
                 projects.
               </p>
-              <div className="flex gap-10 flex-wrap">
+              <div className="flex gap-10 flex-wrap justify-around">
                 {projects?.map((item, index) => {
                   return (
                     <div
                       key={index}
-                      className="group w-[330px] cursor-pointer rounded-lg shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] overflow-hidden p-6 flex flex-wrap gap-8 hover:-translate-y-3 brightness-110 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)]"
+                      className="group w-[30%] cursor-pointer rounded-lg shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] overflow-hidden p-6 flex flex-wrap gap-8 hover:-translate-y-3 brightness-110 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)]"
                     >
                       <img
                         src={item?.image}
-                        className="w-full h-40 object-cover"
+                        className="w-full h-40 object-cover rounded-lg"
                       />
                       <div className="w-full flex items-center flex-wrap gap-2 mt-2 h-12 justify-center">
                         {item?.tags?.map((tag) => (
-                          <p className="text-xs py-1 px-2 text-[#854ce6] bg-[#854ce615] rounded-lg ">
+                          <p
+                            key={tag}
+                            className="text-xs py-1 px-2 text-[#854ce6] bg-[#854ce615] rounded-lg "
+                          >
                             {tag}
                           </p>
                         ))}
@@ -257,7 +260,11 @@ export default function RootLayout({ ...props }) {
                           {item?.description}
                         </p>
                       </div>
-                      <a href={item?.webapp} className="px-6 py-4 text-[#b1b2b399] group-hover:text-white">
+                      <a
+                        href={item?.webapp}
+                        target="_blank"
+                        className="px-6 py-4 text-[#b1b2b399] group-hover:text-white"
+                      >
                         View Website
                       </a>
                     </div>
