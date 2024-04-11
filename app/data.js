@@ -176,6 +176,123 @@ export const Skills = {
     },
   ],
 };
+export const Skill = [
+  {
+    title: "FrontEnd",
+    data: [
+      {
+        img: "../HTML.svg",
+        title: "HTML",
+      },
+      {
+        img: "../CSS.svg",
+        title: "CSS",
+      },
+      {
+        img: "../Sass.svg",
+        title: "Sass",
+      },
+      {
+        img: "../JavaScript.svg",
+        title: "JavaScript",
+      },
+      {
+        img: "../Bootstrap.svg",
+        title: "Bootstrap",
+      },
+      {
+        img: "../TailwindCSS.svg",
+        title: "TailwindCSS",
+      },
+      {
+        img: "../MaterialUI.svg",
+        title: "MaterialUI",
+      },
+      {
+        img: "../Wordpress.svg",
+        title: "Wordpress",
+      },
+      {
+        img: "../Elementor.svg",
+        title: "Elementor",
+      },
+      {
+        img: "../React.svg",
+        title: "React",
+      },
+      {
+        img: "../NextJS.svg",
+        title: "NextJS",
+      },
+    ],
+  },
+  {
+    title: "BackEnd",
+    data: [
+      {
+        img: "../PHP.svg",
+        title: "PHP",
+      },
+      {
+        img: "../Postman.svg",
+        title: "Postman",
+      },
+      {
+        img: "../MongoDB.svg",
+        title: "MongoDB",
+      },
+      {
+        img: "../MySQL.svg",
+        title: "MySQL",
+      },
+      {
+        img: "../Cpanel.svg",
+        title: "Cpanel",
+      },
+      {
+        img: "../Firebase.svg",
+        title: "Firebase",
+      },
+      {
+        img: "../GraphQL.svg",
+        title: "GraphQL",
+      },
+    ],
+  },
+  {
+    title: "Orther",
+    data: [
+      {
+        img: "../AWS.svg",
+        title: "AWS",
+      },
+      {
+        img: "../vercel.svg",
+        title: "Vercel",
+      },
+      {
+        img: "../Figma.svg",
+        title: "Figma",
+      },
+      {
+        img: "../Git.svg",
+        title: "Git",
+      },
+      {
+        img: "../Github.svg",
+        title: "Github",
+      },
+      {
+        img: "../VSCode.svg",
+        title: "VSCode",
+      },
+      {
+        img: "../Ant.svg",
+        title: "Ant Design",
+      },
+    ],
+  },
+];
 export const experiences = [
   {
     id: 0,
