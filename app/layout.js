@@ -20,7 +20,7 @@ export default function RootLayout({ ...props }) {
       <body className={inter.className}>
         <section className="flex mx-auto max-w-[1920px] w-full relative flex-col lg:flex-row">
           {/* Left */}
-          <div className="lg:w-1/4 w-full p-10 mx-0 lg:mx-10 flex-col flex gap-6 relative lg:fixed left-0 top-0 justify-center">
+          <div className="lg:w-[400px] lg:min-w-[360px] w-full p-10 mx-0 lg:mr-10 flex-col flex gap-6 relative lg:fixed left-0 top-0 justify-center">
             <HeroBgAnimation />
             <div className="flex justify-center mt-14">
               <img
@@ -62,7 +62,7 @@ export default function RootLayout({ ...props }) {
             </div>
           </div>
           {/* Right */}
-          <div className="w-full lg:w-3/4 mx-0 lg:mx-5 lg:ml-[30%] relative">
+          <div className="w-full lg:w-3/4 mx-0 lg:ml-[400px] relative">
             <div
               id="skills"
               className="px-5 py-10 text-center flex flex-col items-center justify-center"
@@ -80,8 +80,8 @@ export default function RootLayout({ ...props }) {
                 Here are some of my skills on which I have been working on for
                 the past 2 years.
               </p>
-              <div className="flex gap-10 justify-center lg:justify-between flex-wrap lg:flex-nowrap">
-                <div className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-full lg:w-1/2 ">
+              <div className="flex gap-10 justify-center flex-wrap">
+                <div className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-full lg:w-[45%] ">
                   <p className="text-xl font-bold text-center pb-4">FrontEnd</p>
                   <div className="flex gap-3 flex-wrap justify-center">
                     {Skills?.frontend.map((item) => {
@@ -97,7 +97,7 @@ export default function RootLayout({ ...props }) {
                     })}
                   </div>
                 </div>
-                <div className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-ful lg:w-1/2 ">
+                <div className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-full lg:w-[45%] ">
                   <p className="text-xl font-bold text-center pb-4">BackEnd</p>
                   <div className="flex gap-3 flex-wrap justify-center">
                     {Skills?.backend.map((item) => {
@@ -113,21 +113,21 @@ export default function RootLayout({ ...props }) {
                     })}
                   </div>
                 </div>
-              </div>
-              <div className="mt-10 shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-full lg:w-1/2 ">
-                <p className="text-xl font-bold text-center pb-4">Orther</p>
-                <div className="flex gap-3 flex-wrap justify-center">
-                  {Skills?.orther.map((item) => {
-                    return (
-                      <div
-                        key={item}
-                        className="flex gap-2 p-4 rounded-xl border-[1px]"
-                      >
-                        <img src={item.img} className="w-5 h-5" />
-                        <p>{item.title}</p>
-                      </div>
-                    );
-                  })}
+                <div className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-full lg:w-[45%] ">
+                  <p className="text-xl font-bold text-center pb-4">Orther</p>
+                  <div className="flex gap-3 flex-wrap justify-center">
+                    {Skills?.orther.map((item) => {
+                      return (
+                        <div
+                          key={item}
+                          className="flex gap-2 p-4 rounded-xl border-[1px]"
+                        >
+                          <img src={item.img} className="w-5 h-5" />
+                          <p>{item.title}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@ export default function RootLayout({ ...props }) {
                 different companies and projects.
               </p>
               <div className="hidden lg:block">
-                <Timeline position="alternate">
+                <Timeline position="alternate" className="px-0">
                   {experiences.map((item, index) => {
                     return (
                       <TimelineItem key={index}>

@@ -151,6 +151,10 @@ export const Skills = {
       title: "AWS",
     },
     {
+      img: "../vercel.svg",
+      title: "Vercel",
+    },
+    {
       img: "../Figma.svg",
       title: "Figma",
     },
