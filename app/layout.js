@@ -8,24 +8,72 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { Nunito } from "next/font/google";
 import HeroBgAnimation from "./components/AnimationBG";
+import { Contact as FormContact } from "./components/FormContact";
 import TypeWriter from "./components/TypeWriter";
+import { Fragment, useEffect, useState } from "react";
 import { Bio, Skill, Skills, experiences, projects } from "./data";
 import "./globals.css";
 const inter = Nunito({ subsets: ["latin"] });
 
 export default function RootLayout({ ...props }) {
   const typeWriter = ["FrontEnd Developer", "Wordpress Developer"];
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    });
+  });
+
+  const jumpToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Fragment>
+          {show ? (
+            <div className="fixed bottom-0 right-0 mb-6 mr-6 z-10">
+              <button
+                onClick={jumpToTop}
+                className="bg-[#432479] text-white rounded-full p-2 hover:bg-[#854ce6] transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  />
+                </svg>
+              </button>
+            </div>
+          ) : (
+            <Fragment />
+          )}
+        </Fragment>
         <section className="flex mx-auto max-w-[1920px] w-full relative flex-col lg:flex-row">
           {/* Left */}
-          <div className="lg:w-[400px] lg:min-w-[360px] w-full p-10 mx-0 lg:mr-10 flex-col flex gap-6 relative lg:fixed left-0 top-0 justify-center">
+          <div className="lg:w-[400px] lg:min-w-[360px] w-full p-10 mx-0 lg:mr-10 flex-col flex gap-3 relative lg:fixed left-0 top-0 justify-center">
             <HeroBgAnimation />
-            <div className="flex justify-center mt-14">
+            <div className="flex justify-center">
               <img
-                className="rounded-full w-60"
-                src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/393140572_2623161251192783_8996118009379949440_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHUu0G-KQ4wvJPv-_PsuWvM-EstlBYZRkP4Sy2UFhlGQ9_ENlGvUqBiDYBxzVpVFH3kfatL-JuUn4exRWlO2QzN&_nc_ohc=PvkT5iovfZkAb4g8bLa&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfCFCOloiUWzp3OstqoZg-a11vuR_JyrxSuPicGslHCmzQ&oe=661AC836"
+                className="rounded-full w-44 object-cover h-44"
+                src="./image/cvImage.png"
               />
             </div>
             <p className="text-4xl font-bold text-opacity-90">{Bio?.title}</p>
@@ -323,6 +371,17 @@ export default function RootLayout({ ...props }) {
                   );
                 })}
               </div>
+            </div>
+            <div id="contact" className="text-center pt-4 pb-10">
+              <div>
+                <p
+                  className="
+              text-3xl font-bold pb-8"
+                >
+                  CONTACT ME
+                </p>
+              </div>
+              <FormContact />
             </div>
           </div>
         </section>
