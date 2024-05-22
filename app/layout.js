@@ -13,6 +13,7 @@ import TypeWriter from "./components/TypeWriter";
 import { Fragment, useEffect, useState } from "react";
 import { Bio, Skill, Skills, experiences, projects } from "./data";
 import "./globals.css";
+import Head from "next/head";
 const inter = Nunito({ subsets: ["latin"] });
 
 export default function RootLayout({ ...props }) {
@@ -38,6 +39,10 @@ export default function RootLayout({ ...props }) {
 
   return (
     <html lang="en">
+      <Head>
+        <title>My page title</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
       <body className={inter.className}>
         <Fragment>
           {show ? (
@@ -74,6 +79,7 @@ export default function RootLayout({ ...props }) {
               <img
                 className="rounded-full w-44 object-cover h-44"
                 src="./image/cvImage.png"
+                alt="Avatar"
               />
             </div>
             <p className="text-4xl font-bold text-opacity-90">{Bio?.title}</p>
@@ -147,7 +153,11 @@ export default function RootLayout({ ...props }) {
                               key={indexChild}
                               className="flex gap-2 p-4 rounded-xl border-[1px]"
                             >
-                              <img src={itemChild.img} className="w-5 h-5" />
+                              <img
+                                src={itemChild?.img}
+                                className="w-5 h-5"
+                                alt={itemChild?.alt}
+                              />
                               <p>{itemChild.title}</p>
                             </div>
                           );
@@ -200,15 +210,16 @@ export default function RootLayout({ ...props }) {
                               <img
                                 className="w-12 h-12 p-1 bg-white rounded-lg "
                                 src={item?.img}
+                                alt={item?.alt}
                               />
                               <div className="flex flex-col items-start">
-                                <p className="text-lg font-semibold text-[#f2f3f499]">
+                                <p className="text-lg font-semibold text-left text-[#ffffff]">
                                   {item?.role}
                                 </p>
-                                <p className="text-sm font-medium text-[#b1b2b399]">
+                                <p className="text-sm font-medium text-[#eff7ff]">
                                   {item.company}
                                 </p>
-                                <p className="text-xs text-[#b1b2b380]">
+                                <p className="text-xs text-[#eaeaea80]">
                                   {item?.date}
                                 </p>
                               </div>
@@ -274,13 +285,13 @@ export default function RootLayout({ ...props }) {
                                 src={item?.img}
                               />
                               <div className="flex flex-col items-start">
-                                <p className="text-lg font-semibold text-[#f2f3f499]">
+                                <p className="text-lg font-semibold text-[#ffffff]">
                                   {item?.role}
                                 </p>
-                                <p className="text-sm font-medium text-[#b1b2b399]">
+                                <p className="text-sm font-medium text-[#eff7ff]">
                                   {item.company}
                                 </p>
-                                <p className="text-xs text-[#b1b2b380]">
+                                <p className="text-xs text-[#eaeaea80]">
                                   {item?.date}
                                 </p>
                               </div>
@@ -341,12 +352,13 @@ export default function RootLayout({ ...props }) {
                       <img
                         src={item?.image}
                         className="w-full h-40 object-cover rounded-lg"
+                        alt={item?.alt}
                       />
                       <div className="w-full flex items-center flex-wrap gap-2 mt-2 h-12 justify-center">
                         {item?.tags?.map((tag) => (
                           <p
                             key={tag}
-                            className="text-xs py-1 px-2 text-[#854ce6] bg-[#854ce615] rounded-lg "
+                            className="text-xs py-1 px-2 text-[#ffffff] bg-[#8554db15] rounded-lg "
                           >
                             {tag}
                           </p>
@@ -357,14 +369,14 @@ export default function RootLayout({ ...props }) {
                           {item?.title}
                         </p>
                         <p className="text-xs text-[#b1b2b380]">{item?.date}</p>
-                        <p className="mt-2 line-clamp-3 text-[#b1b2b399]">
+                        <p className="mt-2 line-clamp-3 text-[#b1b2b3]">
                           {item?.description}
                         </p>
                       </div>
                       <a
                         href={item?.webapp}
                         target="_blank"
-                        className="px-6 py-4 text-[#b1b2b399] group-hover:text-white"
+                        className="px-6 py-4 text-[#dadada] group-hover:text-white"
                       >
                         View Website
                       </a>
