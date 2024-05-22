@@ -7,14 +7,15 @@ import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { Nunito } from "next/font/google";
+import Head from "next/head";
+import { Fragment, useEffect, useState } from "react";
 import HeroBgAnimation from "./components/AnimationBG";
 import { Contact as FormContact } from "./components/FormContact";
 import TypeWriter from "./components/TypeWriter";
-import { Fragment, useEffect, useState } from "react";
-import { Bio, Skill, Skills, experiences, projects } from "./data";
+import { Bio, Skill, experiences, projects } from "./data";
 import "./globals.css";
-import Head from "next/head";
 const inter = Nunito({ subsets: ["latin"] });
+
 
 export default function RootLayout({ ...props }) {
   const typeWriter = ["FrontEnd Developer", "Wordpress Developer"];
@@ -283,6 +284,7 @@ export default function RootLayout({ ...props }) {
                               <img
                                 className="w-12 h-12 p-1 bg-white rounded-lg "
                                 src={item?.img}
+                                alt={item?.alt}
                               />
                               <div className="flex flex-col items-start">
                                 <p className="text-lg font-semibold text-[#ffffff]">
