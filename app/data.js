@@ -291,8 +291,7 @@ export const projects = [
     date: "August 2022 - March 2023",
     description:
       "Use ReactJS, and NextJS to create the interface. Use GrapQL to fetch data for the interface. Optimize speed according to PageSpeed Insight standards",
-    image:
-      "https://scontent.fsgn5-15.fna.fbcdn.net/v/t1.15752-9/435589628_461142396253350_6327440908277530197_n.png?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGPRzcAFCLfv-WijND9P_mIsXr7mtPJ3C-xevua08ncL_n7LV1l1cmMin1jymEcr5S-IPzdmv8DlqTTuYE18Ymz&_nc_ohc=MRu4dLHjvjkAb5r1YFV&_nc_ht=scontent.fsgn5-15.fna&oh=03_AdVjVac6lnT-mhIYYOPIN1NgKSEv7qk1fITHzwbFj4jtDA&oe=663DD292",
+    image: "/image/Gleads.png",
     tags: ["React Js", "NextJS", "WordPress", "GraphQL", "PHP", "AWS"],
     webapp: "https://gleads.vn/",
   },

@@ -102,6 +102,7 @@ export default function RootLayout({ ...props }) {
                     href={item.url}
                     key={item}
                     className="rounded-full bg-white m-3"
+                    target="_blank"
                   >
                     {item.img}
                   </a>
