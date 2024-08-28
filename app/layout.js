@@ -44,36 +44,34 @@ export default function RootLayout({ ...props }) {
         <meta property="og:title" content="My page title" key="title" />
       </Head>
       <body className={inter.className}>
-        <Fragment>
-          {show ? (
-            <div className="fixed bottom-0 right-0 mb-6 mr-6 z-10">
-              <button
-                onClick={jumpToTop}
-                className="bg-[#432479] text-white rounded-full p-2 hover:bg-[#854ce6] transition duration-200 ease-in-out"
+        {show ? (
+          <div className="fixed bottom-0 right-0 mb-6 mr-6 z-10">
+            <button
+              onClick={jumpToTop}
+              className="bg-[#432479] text-white rounded-full p-2 hover:bg-[#854ce6] transition duration-200 ease-in-out"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 10l7-7m0 0l7 7m-7-7v18"
-                  />
-                </svg>
-              </button>
-            </div>
-          ) : (
-            <Fragment />
-          )}
-        </Fragment>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 10l7-7m0 0l7 7m-7-7v18"
+                />
+              </svg>
+            </button>
+          </div>
+        ) : (
+          <Fragment />
+        )}
         <section className="flex mx-auto max-w-[1920px] w-full relative flex-col lg:flex-row">
           {/* Left */}
-          <div className="lg:w-[400px] lg:min-w-[360px] w-full p-10 mx-0 lg:mr-10 flex-col flex gap-3 relative lg:fixed left-0 top-0 justify-center">
+          <div className="lg:h-screen lg:w-[400px] lg:min-w-[360px] w-full lg:p-10 lg:pr-4 px-5 pt-10 pb-5 mx-0 lg:mr-10 flex-col flex gap-3 relative lg:fixed left-0 top-0 justify-center">
             <HeroBgAnimation />
             <div className="flex justify-center">
               <img
@@ -101,7 +99,14 @@ export default function RootLayout({ ...props }) {
                 </a>
               );
             })}
-            <div className="flex">
+            <a
+              href="https://www.hackerrank.com/certificates/d6f59345f207"
+              className="text-xl font-bold text-opacity-90"
+              target="_blank"
+            >
+              Certificate
+            </a>
+            <div className="flex place-content-evenly">
               {Bio?.social.map((item) => {
                 return (
                   <a
@@ -120,7 +125,7 @@ export default function RootLayout({ ...props }) {
           <div className="w-full lg:w-3/4 mx-0 lg:ml-[400px] relative">
             <div
               id="skills"
-              className="px-5 py-10 text-center flex flex-col items-center justify-center"
+              className="px-5 lg:py-10 py-5 text-center flex flex-col items-center justify-center"
             >
               <p
                 className="
@@ -130,7 +135,7 @@ export default function RootLayout({ ...props }) {
               </p>
               <p
                 className="
-              text-lg font-bold pt-4 pb-8"
+              text-lg font-bold pt-4 pb-8 px-3"
               >
                 Here are some of my skills on which I have been working on for
                 the past 2 years.
@@ -140,7 +145,7 @@ export default function RootLayout({ ...props }) {
                   return (
                     <div
                       key={index}
-                      className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-full lg:w-[45%] "
+                      className=" lg:min-w-[465px] shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-full lg:w-[45%] "
                     >
                       <p className="text-xl font-bold text-center pb-4">
                         {item.title}
@@ -168,7 +173,7 @@ export default function RootLayout({ ...props }) {
                 })}
               </div>
             </div>
-            <div id="experience" className="text-center px-0 lg:px-5 py-10">
+            <div id="experience" className="text-center px-0 lg:px-5 pt-5 pb-0 lg:py-10">
               <p
                 className="
               text-3xl font-bold"
@@ -177,12 +182,12 @@ export default function RootLayout({ ...props }) {
               </p>
               <p
                 className="
-              text-lg font-bold pt-4 pb-8"
+              text-lg font-bold pt-4 pb-4 lg:pb-8 px-3"
               >
                 My work experience as a software engineer and working on
                 different companies and projects.
               </p>
-              <div className="hidden lg:block">
+              <div className="hidden xl:block">
                 <Timeline position="alternate" className="px-0">
                   {experiences.map((item, index) => {
                     return (
@@ -255,7 +260,7 @@ export default function RootLayout({ ...props }) {
                   })}
                 </Timeline>
               </div>
-              <div className="lg:hidden block">
+              <div className="xl:hidden block">
                 <Timeline>
                   {experiences.map((item, index) => {
                     return (
@@ -329,7 +334,7 @@ export default function RootLayout({ ...props }) {
                 </Timeline>
               </div>
             </div>
-            <div id="project" className="text-center px-5 py-10">
+            <div id="project" className="text-center px-5 py-5 lg:py-10">
               <p
                 className="
               text-3xl font-bold"
@@ -338,7 +343,7 @@ export default function RootLayout({ ...props }) {
               </p>
               <p
                 className="
-              text-lg font-bold pt-4 pb-8"
+              text-lg font-bold pt-4 pb-8 px-3"
               >
                 I have worked on a wide range of projects. Here are some of my
                 projects.
@@ -348,49 +353,50 @@ export default function RootLayout({ ...props }) {
                   return (
                     <div
                       key={index}
-                      className="group w-full md:w-[45%] lg:w-[45%] xl:w-[30%] cursor-pointer rounded-lg shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] overflow-hidden p-6 flex flex-wrap gap-8 hover:-translate-y-3 brightness-110 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)]"
+                      className="group w-full md:w-[45%] lg:w-[45%] xl:w-[30%] cursor-pointer rounded-lg shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] overflow-hidden  hover:-translate-y-3 brightness-110 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)]"
                     >
-                      <img
-                        src={item?.image}
-                        className="w-full h-40 object-cover rounded-lg"
-                        alt={item?.alt}
-                      />
-                      <div className="w-full flex items-center flex-wrap gap-2 mt-2 h-12 justify-center">
-                        {item?.tags?.map((tag) => (
-                          <p
-                            key={tag}
-                            className="text-xs py-1 px-2 text-[#ffffff] bg-[#8554db15] rounded-lg "
-                          >
-                            {tag}
-                          </p>
-                        ))}
-                      </div>
-                      <div className="w-full flex flex-col">
-                        <p className="text-xl font-semibold text-[#b1b2b3] line-clamp-2">
-                          {item?.title}
-                        </p>
-                        <p className="text-xs text-[#b1b2b380]">{item?.date}</p>
-                        <p className="mt-2 line-clamp-3 text-[#b1b2b3]">
-                          {item?.description}
-                        </p>
-                      </div>
                       <a
                         href={item?.webapp}
-                        target="_blank"
-                        className="px-6 py-4 text-[#dadada] group-hover:text-white"
+                        target="_blank "
+                        className=" px-6 py-8 flex flex-wrap gap-8"
                       >
-                        View Website
+                        <img
+                          src={item?.image}
+                          className="w-full h-40 object-cover rounded-lg"
+                          alt={item?.alt}
+                        />
+                        <div className="w-full flex items-center flex-wrap gap-2 mt-2 h-12 justify-center">
+                          {item?.tags?.map((tag) => (
+                            <p
+                              key={tag}
+                              className="text-xs py-1 px-2 text-[#ffffff] bg-[#8554db15] rounded-lg "
+                            >
+                              {tag}
+                            </p>
+                          ))}
+                        </div>
+                        <div className="w-full flex flex-col flex-wrap gap-1">
+                          <p className="text-xl font-semibold text-[#b1b2b3] line-clamp-2">
+                            {item?.title}
+                          </p>
+                          <p className="text-xs text-[#b1b2b380]">
+                            {item?.date}
+                          </p>
+                          <p className="mt-2 line-clamp-3 text-[#b1b2b3]">
+                            {item?.description}
+                          </p>
+                        </div>
                       </a>
                     </div>
                   );
                 })}
               </div>
             </div>
-            <div id="contact" className="text-center pt-4 pb-10">
+            <div id="contact" className="text-center py-5">
               <div>
                 <p
                   className="
-              text-3xl font-bold pb-8"
+              text-3xl font-bold pb-0 lg:pb-8"
                 >
                   CONTACT ME
                 </p>

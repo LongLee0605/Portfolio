@@ -43,7 +43,7 @@ export function Contact() {
   }
 
   return (
-    <div className="px-5 pb-10 text-center flex flex-col items-center justify-center">
+    <div className="px-5 pb-5 lg:pb-10 text-center flex flex-col items-center justify-center">
       <div className="max-w-[700px] w-full mx-auto pt-4 ">
         <form
           onSubmit={handleSubmit}
