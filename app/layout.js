@@ -16,7 +16,6 @@ import { Bio, Skill, experiences, projects } from "./data";
 import "./globals.css";
 const inter = Nunito({ subsets: ["latin"] });
 
-
 export default function RootLayout({ ...props }) {
   const typeWriter = ["FrontEnd Developer", "Wordpress Developer"];
   const [show, setShow] = useState(false);
@@ -50,7 +49,7 @@ export default function RootLayout({ ...props }) {
             <div className="fixed bottom-0 right-0 mb-6 mr-6 z-10">
               <button
                 onClick={jumpToTop}
-                className="bg-[#432479] text-white rounded-full p-2 hover:bg-[#854ce6] transition"
+                className="bg-[#432479] text-white rounded-full p-2 hover:bg-[#854ce6] transition duration-200 ease-in-out"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +140,7 @@ export default function RootLayout({ ...props }) {
                   return (
                     <div
                       key={index}
-                      className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-full lg:w-[45%] "
+                      className="shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] px-4 pt-4 pb-8 rounded-3xl border-2 border-[#844ce696] w-full lg:w-[45%] "
                     >
                       <p className="text-xl font-bold text-center pb-4">
                         {item.title}
@@ -204,7 +203,7 @@ export default function RootLayout({ ...props }) {
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: "28px", px: 2 }}>
                           <div
-                            className="rounded-xl shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] border-[#844ce696] p-6 justify-between
+                            className="rounded-xl shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] border-[#844ce696] p-6 justify-between
                       flex relative flex-col gap-4 overflow-hidden"
                           >
                             <div className="w-full flex gap-4 items-center">
@@ -277,7 +276,7 @@ export default function RootLayout({ ...props }) {
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: "28px", px: 2 }}>
                           <div
-                            className="rounded-xl shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] border-[#844ce696] p-6 justify-between
+                            className="rounded-xl shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] hover:-translate-y-3 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)] border-[#844ce696] p-6 justify-between
                       flex relative flex-col gap-4 overflow-hidden"
                           >
                             <div className="w-full flex gap-4 items-center">
@@ -349,7 +348,7 @@ export default function RootLayout({ ...props }) {
                   return (
                     <div
                       key={index}
-                      className="group w-full md:w-[45%] lg:w-[45%] xl:w-[30%] cursor-pointer rounded-lg shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] overflow-hidden p-6 flex flex-wrap gap-8 hover:-translate-y-3 brightness-110 duration-200 hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)]"
+                      className="group w-full md:w-[45%] lg:w-[45%] xl:w-[30%] cursor-pointer rounded-lg shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] overflow-hidden p-6 flex flex-wrap gap-8 hover:-translate-y-3 brightness-110 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)]"
                     >
                       <img
                         src={item?.image}
@@ -397,6 +396,10 @@ export default function RootLayout({ ...props }) {
                 </p>
               </div>
               <FormContact />
+            </div>
+            <div className="text-center text-lg py-10 border-t-[1px] px-3">
+              <p> Built and designed by Le Tran Dang Long</p>
+              <p>Copyright © 2024 All Rights Reserved</p>
             </div>
           </div>
         </section>

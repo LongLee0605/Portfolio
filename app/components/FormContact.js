@@ -85,7 +85,7 @@ export function Contact() {
             onChange={(e) => setMessage(e.target.value)}
           />
 
-          <button type="submit" className="py-4 px-6 bg-[#854ce6]">
+          <button type="submit" className="py-4 px-6 bg-[#854ce6] hover:bg-[#432479] transition duration-200 ease-in-out">
             GET IN TOUCH
           </button>
         </form>

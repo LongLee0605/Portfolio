@@ -21,6 +21,10 @@ export const Bio = {
       title: "Contact",
       url: "#contact",
     },
+    {
+      title: "Certificate",
+      url: "https://www.hackerrank.com/certificates/d6f59345f207",
+    },
   ],
   social: [
     {
