@@ -38,7 +38,7 @@ export const Bio = {
         </svg>
       ),
       url: "https://www.facebook.com/leez.dlong",
-      alt:"Facebook icon"
+      alt: "Facebook icon",
     },
     {
       img: (
@@ -54,7 +54,7 @@ export const Bio = {
         </svg>
       ),
       url: "https://www.linkedin.com/in/l%C3%AA-tr%E1%BA%A7n-%C4%91%C4%83ng-long-26337b227",
-      alt:"Linkedin icon"
+      alt: "Linkedin icon",
     },
     {
       img: (
@@ -70,7 +70,7 @@ export const Bio = {
         </svg>
       ),
       url: "https://github.com/LongLee0605?tab=repositories",
-      alt:"Github icon"
+      alt: "Github icon",
     },
     {
       img: (
@@ -87,126 +87,126 @@ export const Bio = {
         </svg>
       ),
       url: "https://static.topcv.vn/topcv-cv-uploads/32e2c287e8d4bf1bd06b233d44e59c48.pdf#toolbar=0&navpanes=0&scrollbar=0",
-      alt:"Resume icon"
+      alt: "Resume icon",
     },
   ],
 };
 // skill
 export const Skill = [
   {
-    title: "FrontEnd",
+    title: "Main Skill",
     data: [
       {
         img: "../HTML.svg",
         title: "HTML",
-      alt:"HTML"  
+        alt: "HTML",
       },
       {
         img: "../CSS.svg",
         title: "CSS",
-      alt:"CSS"},
+        alt: "CSS",
+      },
       {
         img: "../Sass.svg",
         title: "Sass",
-      alt:"Sass"},
+        alt: "Sass",
+      },
       {
         img: "../JavaScript.svg",
         title: "JavaScript",
-      alt:"JavaScript"},
+        alt: "JavaScript",
+      },
       {
         img: "../Bootstrap.svg",
         title: "Bootstrap",
-      alt:"Bootstrap"},
+        alt: "Bootstrap",
+      },
       {
         img: "../TailwindCSS.svg",
         title: "TailwindCSS",
-      alt:"TailwindCSS"},
+        alt: "TailwindCSS",
+      },
       {
         img: "../MaterialUI.svg",
         title: "MaterialUI",
-      alt:"MaterialUI"},
+        alt: "MaterialUI",
+      },
       {
         img: "../Wordpress.svg",
         title: "Wordpress",
-      alt:"Wordpress"},
+        alt: "Wordpress",
+      },
       {
         img: "../Elementor.svg",
         title: "Elementor",
-      alt:"Elementor"},
+        alt: "Elementor",
+      },
       {
         img: "../React.svg",
         title: "React",
-      alt:"React"},
+        alt: "React",
+      },
       {
         img: "../NextJS.svg",
         title: "NextJS",
-      alt:"NextJS"},
+        alt: "NextJS",
+      },
     ],
   },
+
   {
-    title: "BackEnd",
+    title: "Other",
     data: [
       {
         img: "../PHP.svg",
         title: "PHP",
-      alt:"PHP"},
+        alt: "PHP",
+      },
       {
         img: "../Postman.svg",
         title: "Postman",
-      alt:"Postman"},
-      {
-        img: "../MongoDB.svg",
-        title: "MongoDB",
-      alt:"MongoDB"},
-      {
-        img: "../MySQL.svg",
-        title: "MySQL",
-      alt:"MySQL"},
-      {
-        img: "../Cpanel.svg",
-        title: "Cpanel",
-      alt:"Cpanel"},
-      {
-        img: "../Firebase.svg",
-        title: "Firebase",
-      alt:"Firebase"},
+        alt: "Postman",
+      },
       {
         img: "../GraphQL.svg",
         title: "GraphQL",
-      alt:"GraphQL"},
-    ],
-  },
-  {
-    title: "Orther",
-    data: [
-      {
-        img: "../AWS.svg",
-        title: "AWS",
-      alt:"AWS"},
+        alt: "GraphQL",
+      },
       {
         img: "../vercel.svg",
         title: "Vercel",
-      alt:"Vercel"},
+        alt: "Vercel",
+      },
       {
         img: "../Figma.svg",
         title: "Figma",
-      alt:"Figma"},
+        alt: "Figma",
+      },
       {
         img: "../Git.svg",
         title: "Git",
-      alt:"Git"},
+        alt: "Git",
+      },
       {
         img: "../Github.svg",
         title: "Github",
-      alt:"Github"},
+        alt: "Github",
+      },
       {
         img: "../VSCode.svg",
         title: "VSCode",
-      alt:"VSCode"},
+        alt: "VSCode",
+      },
       {
         img: "../Ant.svg",
         title: "Ant Design",
-      alt:"Design"},
+        alt: "Design",
+      },
+      {
+        img: "../Cpanel.svg",
+        title: "Cpanel",
+        alt: "Cpanel",
+      },
     ],
   },
 ];
@@ -214,7 +214,7 @@ export const experiences = [
   {
     id: 0,
     img: "https://www.internship.edu.vn/wp-content/uploads/Logo_Black-200x183.png",
-    alt:"Maskcodex",
+    alt: "Maskcodex",
     role: "Intern Frontend Developer",
     company: "Maskcodex",
     date: "August 2021 - October 2021",
@@ -234,7 +234,7 @@ export const experiences = [
   {
     id: 1,
     img: "https://static2.viecngay.vn/users/27657780_2031969683726626_8783410622886580474_n-b95748eefe7c6e1e117c7e2278c13bef-5d833bb27e70c.jpg",
-    alt:"AllgrowLabo",
+    alt: "AllgrowLabo",
     role: "Fresher Frontend Developer",
     company: "AllgrowLabo",
     date: "October 2021 - January 2022",
@@ -254,7 +254,7 @@ export const experiences = [
   {
     id: 2,
     img: "https://img.freepik.com/free-photo/background_53876-32170.jpg?w=1380&t=st=1712724179~exp=1712724779~hmac=fecf15c49db88a596390b39f2ec2230ddc85607f649ecf166959f0d91bd892b0",
-    alt:"Freelancer",
+    alt: "Freelancer",
     role: "Freelancer Frontend Developer",
     company: "",
     date: "March 2022 - August 2023",
