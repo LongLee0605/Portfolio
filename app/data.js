@@ -293,9 +293,9 @@ export const experiences = [
     ],
   },
 ];
-export const projects = [
+export const projectsNextJS = [
   {
-    id: 9,
+    id: 0,
     title: "BBCIncorp",
     date: "August 2022 - March 2023",
     description:
@@ -304,20 +304,24 @@ export const projects = [
     alt: "Project BBCIncorp",
     tags: ["React Js", "NextJS", "WordPress", "GraphQL", "PHP", "AWS"],
     webapp: "https://bbcincorp.com/",
+    ido: "",
   },
   {
-    id: 0,
+    id: 1,
     title: "Gleads",
     date: "August 2022 - March 2023",
     description:
-      "Use ReactJS, and NextJS to create the interface. Use GrapQL to fetch data for the interface. Optimize speed according to PageSpeed Insight standards",
+      "Gleads is a sustainable and strategic partner for Vietnamese businesses, providing integrated total marketing solutions, applying modern methods and techniques to help businesses achieve profit efficiency compared to traditional methods. system.",
     image: "/image/Gleads.png",
     alt: "Project Gleads",
     tags: ["React Js", "NextJS", "WordPress", "GraphQL", "PHP", "AWS"],
     webapp: "https://gleads.vn/",
+    ido: "<div><h3 class='pb-2'>With ReactJS/NextJS</h3><p class='px-2'>I&lsquo;m involved in creating small components:</p><ul class='px-4'><li>- Accordions</li><li>- Table (with static data or data  fetched from CMS via GraphQL)</li><li>- Small components related to the above pages</li></ul><p class='px-2'>Create new pages:</p><ul class='px-4'><li>- Service</li><li>- Contacts</li><li>- Recruitment</li><li>- Blog</li><li>- About us</li></ul></div><div><h3 class='py-2'>With WordPress:</h3><p class='px-2'>Participate in creating new CMS</p><ul class='px-4'><li>- Custom fields/Post type</li><li>- Divide roles for each department</li><li>- Create multisite for CMS</li><li>- Create custom table of content as required</li><li>- Create image optimization function (Upload image to CMS &rarr; Submit it to AWS &rarr; transform into Webp image to reduce size and increase page loading speed for website)</li></ul><p class='px-2'>Receive requests and edit functions:</p><ul class='px-4'><li>- Change CMS to suit SEO requirements</li><li>- Customize the data returned by GraphQL to suit Frontend requirements</li></ul></div>",
   },
+];
+export const projectsWordpress = [
   {
-    id: 1,
+    id: 0,
     title: "Hexagon",
     date: "",
     description:
@@ -329,7 +333,7 @@ export const projects = [
     webapp: "https://hexagon.solidnsoft.com/",
   },
   {
-    id: 2,
+    id: 1,
     title: "Dropbox",
     date: "",
     description:
@@ -341,7 +345,7 @@ export const projects = [
     webapp: "https://dropbox.solidnsoft.com/",
   },
   {
-    id: 3,
+    id: 2,
     title: "Doctor Long",
     date: "",
     description:
@@ -353,7 +357,7 @@ export const projects = [
     webapp: "https://bacsilong.com/",
   },
   {
-    id: 4,
+    id: 3,
     title: "TMWine",
     date: "",
     description:
@@ -365,7 +369,7 @@ export const projects = [
     webapp: "https://quatet.tmwine.vn/",
   },
   {
-    id: 5,
+    id: 4,
     title: "Dai Quang Dung LLC",
     date: "",
     description:
@@ -378,7 +382,7 @@ export const projects = [
     webapp: "https://daiquangdung.com/",
   },
   {
-    id: 6,
+    id: 5,
     title: "Wonderfull Lao",
     date: "",
     description:
@@ -391,7 +395,7 @@ export const projects = [
     webapp: "https://wonderfullao.com",
   },
   {
-    id: 7,
+    id: 6,
     title: "Solar",
     date: "",
     description:
@@ -403,7 +407,7 @@ export const projects = [
     webapp: "https://hogiadinh.tss-solar.com/",
   },
   {
-    id: 8,
+    id: 7,
     title: "Ping pong Duy Hung",
     date: "",
     description:

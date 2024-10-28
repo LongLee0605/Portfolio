@@ -36,3 +36,16 @@ textarea {
     scrollbar-width: none; /* Firefox */
   }
 }
+/* CSS tùy chỉnh cho thanh cuộn */
+.modal-content::-webkit-scrollbar {
+  width: 6px; /* Độ rộng của thanh cuộn */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #8554db; /* Màu của thanh cuộn */
+  border-radius: 10px; /* Độ bo tròn của thanh cuộn */
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #252525; /* Màu nền của đường cuộn */
+}

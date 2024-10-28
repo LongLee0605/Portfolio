@@ -12,14 +12,33 @@ import { Fragment, useEffect, useState } from "react";
 import HeroBgAnimation from "./components/AnimationBG";
 import { Contact as FormContact } from "./components/FormContact";
 import TypeWriter from "./components/TypeWriter";
-import { Bio, Skill, experiences, projects } from "./data";
+import {
+  Bio,
+  Skill,
+  experiences,
+  projectsNextJS,
+  projectsWordpress,
+} from "./data";
 import "./globals.css";
+import NextJS from "./components/CompanyProjects/NextJS";
+import Wordpress from "./components/CompanyProjects/Wordpress";
 const inter = Nunito({ subsets: ["latin"] });
 
 export default function RootLayout({ ...props }) {
   const typeWriter = ["FrontEnd Developer", "Wordpress Developer"];
   const [show, setShow] = useState(false);
+  const [activeTab, setActiveTab] = useState("tab1");
 
+  const renderContent = () => {
+    switch (activeTab) {
+      case "tab1":
+        return <NextJS projectsNextJS={projectsNextJS} />;
+      case "tab2":
+        return <Wordpress projectsWordpress={projectsWordpress} />;
+      default:
+        return <NextJS projectsNextJS={projectsNextJS} />;
+    }
+  };
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 200) {
@@ -173,7 +192,10 @@ export default function RootLayout({ ...props }) {
                 })}
               </div>
             </div>
-            <div id="experience" className="text-center px-0 lg:px-5 pt-5 pb-0 lg:py-10">
+            <div
+              id="experience"
+              className="text-center px-0 lg:px-5 pt-5 pb-0 lg:py-10"
+            >
               <p
                 className="
               text-3xl font-bold"
@@ -348,48 +370,30 @@ export default function RootLayout({ ...props }) {
                 I have worked on a wide range of projects. Here are some of my
                 projects.
               </p>
-              <div className="flex gap-10 flex-wrap justify-around">
-                {projects?.map((item, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="group w-full md:w-[45%] lg:w-[45%] xl:w-[30%] cursor-pointer rounded-lg shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] overflow-hidden  hover:-translate-y-3 brightness-110 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)]"
-                    >
-                      <a
-                        href={item?.webapp}
-                        target="_blank "
-                        className=" px-6 py-8 flex flex-wrap gap-8"
-                      >
-                        <img
-                          src={item?.image}
-                          className="w-full h-40 object-cover rounded-lg"
-                          alt={item?.alt}
-                        />
-                        <div className="w-full flex items-center flex-wrap gap-2 mt-2 h-12 justify-center">
-                          {item?.tags?.map((tag) => (
-                            <p
-                              key={tag}
-                              className="text-xs py-1 px-2 text-[#ffffff] bg-[#8554db15] rounded-lg "
-                            >
-                              {tag}
-                            </p>
-                          ))}
-                        </div>
-                        <div className="w-full flex flex-col flex-wrap gap-1">
-                          <p className="text-xl font-semibold text-[#b1b2b3] line-clamp-2">
-                            {item?.title}
-                          </p>
-                          <p className="text-xs text-[#b1b2b380]">
-                            {item?.date}
-                          </p>
-                          <p className="mt-2 line-clamp-3 text-[#b1b2b3]">
-                            {item?.description}
-                          </p>
-                        </div>
-                      </a>
-                    </div>
-                  );
-                })}
+              <div>
+                <div className="flex gap-5 pb-10 px-5">
+                  <button
+                    onClick={() => setActiveTab("tab1")}
+                    className={`${
+                      activeTab === "tab1"
+                        ? "py-4 px-6 bg-[#854ce6] hover:bg-[#432479] transition duration-300 ease-in-out rounded"
+                        : "py-4 px-6 bg-transparent hover:bg-[#432479] transition duration-300 ease-in-out rounded border-solid border-[1px] border-[#333]"
+                    }`}
+                  >
+                    Company Projects
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("tab2")}
+                    className={`${
+                      activeTab === "tab2"
+                        ? "py-4 px-6 bg-[#854ce6] hover:bg-[#432479] transition duration-300 ease-in-out rounded border-none "
+                        : "py-4 px-6 bg-transparent hover:bg-[#432479] transition duration-300 ease-in-out rounded border-solid border-[1px] border-[#333]"
+                    }`}
+                  >
+                    Outsource Projects
+                  </button>
+                </div>
+                <div>{renderContent()}</div>
               </div>
             </div>
             <div id="contact" className="text-center py-5">
