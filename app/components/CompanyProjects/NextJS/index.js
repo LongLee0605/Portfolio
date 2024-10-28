@@ -47,7 +47,7 @@ function NextJS({ projectsNextJS }) {
             <a
               onClick={() => openModal(item)}
               target="_blank"
-              className="px-6 py-8 flex flex-wrap gap-8"
+              className="px-6 py-8 flex flex-wrap gap-6"
             >
               <img
                 src={item?.image}
@@ -89,7 +89,7 @@ function NextJS({ projectsNextJS }) {
             >
               ✕
             </button>
-            <div className="flex content-center items-center lg:gap-10 gap-6 lg:flex-row flex-col">
+            <div className="flex content-center items-center lg:gap-10 gap-4 lg:flex-row flex-col">
               <div className="lg:w-1/3 w-full justify-center flex">
                 <img
                   src={selectedProject.image}
@@ -108,7 +108,7 @@ function NextJS({ projectsNextJS }) {
                     </p>
                   ))}
                 </div>
-                <div className="w-full flex flex-col flex-wrap gap-2 mt-4">
+                <div className="w-full flex flex-col flex-wrap gap-2 my-4">
                   <p className="text-xl font-semibold text-[#b1b2b3] line-clamp-2">
                     {selectedProject?.title}
                   </p>
@@ -116,7 +116,7 @@ function NextJS({ projectsNextJS }) {
                     {selectedProject?.date}
                   </p>
                   <div
-                    className="mt-2 text-[#b1b2b3] text-left h-60 overflow-y-auto modal-content"
+                    className="mt-2 text-[#b1b2b3] text-left lg:h-[25vh] h-[20vh] overflow-y-auto modal-content"
                     dangerouslySetInnerHTML={{ __html: selectedProject?.ido }}
                   />
                 </div>

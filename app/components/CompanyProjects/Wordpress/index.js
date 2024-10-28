@@ -11,7 +11,7 @@ function Wordpress({ projectsWordpress }) {
               <a
                 href={item?.webapp}
                 target="_blank "
-                className=" px-6 py-8 flex flex-wrap gap-8"
+                className=" px-6 py-8 flex flex-wrap gap-6"
               >
                 <img
                   src={item?.image}
