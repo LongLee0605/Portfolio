@@ -304,7 +304,7 @@ export const projectsNextJS = [
     alt: "Project BBCIncorp",
     tags: ["React Js", "NextJS", "WordPress", "GraphQL", "PHP", "AWS"],
     webapp: "https://bbcincorp.com/",
-    ido: "",
+    ido: "<div><h3 class='pb-2'>With ReactJS/NextJS</h3><p class='px-2'>Fix errors in old components:</p><ul class='px-4'><li>- Blog related components</li><li>- Learn and create bubble effects with canvas</li><li>- Create price list with data fetched from the backend</li><li>- Update database for 18 countries</li></ul><div><h3 class='py-2'>With WordPress:</h3><p class='px-2'>Participate in creating new CMS</p><ul class='px-4'><li>- Custom fields/Post type</li><li>- Divide roles for each department</li><li>- Create multisite for CMS</li><li>- Create custom table of content as required</li><li>- Create image optimization function (Upload image to CMS &rarr; Submit it to AWS &rarr; transform into Webp image to reduce size and increase page loading speed for website)</li></ul><p class='px-2'>Receive requests and edit functions:</p><ul class='px-4'><li>- Change CMS to suit SEO requirements</li><li>- Customize the data returned by GraphQL to suit Frontend requirements</li></ul></div>",
   },
   {
     id: 1,
