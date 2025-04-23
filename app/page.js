@@ -28,12 +28,12 @@ export const metadata = {
   openGraph: {
     title: "Lê Trần Đăng Long – Junior Frontend Developer | Portfolio cá nhân",
     description:
-      "Portfolio hiện đại của Lê Trần Đăng Long – Junior Frontend Developer. Nổi bật với các dự án ReactJS, NextJS, Typescript, cùng kinh nghiệm thực chiến tại MaskCodex, Allgrow Labo, Gleads Việt Nam, TMD, Nam Long SoftWare.",
+      "Portfolio của Lê Trần Đăng Long – Junior Frontend Developer. Nổi bật với các dự án ReactJS, NextJS, Typescript, cùng kinh nghiệm thực chiến tại MaskCodex, Allgrow Labo, Gleads Việt Nam, TMD, Nam Long SoftWare.",
     url: "https://letrandanglong.vercel.app/",
     siteName: "Lê Trần Đăng Long Portfolio",
     images: [
       {
-        url: "https://letrandanglong.vercel.app/cvImage.png",
+        url: "./image/cvImage.png",
         alt: "Ảnh đại diện portfolio Lê Trần Đăng Long – Junior Frontend Developer",
       },
     ],
