@@ -45,14 +45,18 @@ function NextJS({ projectsNextJS }) {
             className="group w-full md:w-[45%] cursor-pointer rounded-lg shadow-[0_0_12px_4px_rgba(133,_76,_230,_0.2)] overflow-hidden hover:-translate-y-3 brightness-110 duration-200 ease-in-out hover:shadow-[0_15px_30px_rgba(133,_76,_230,_0.4)]"
           >
             <a
-              onClick={() => openModal(item)}
-              target="_blank"
+              href={item.webapp || `#project-${item.id || index}`}
+              aria-label={`Xem chi tiết dự án ${item.title}`}
+              onClick={(e) => {
+                e.preventDefault();
+                openModal(item);
+              }}
               className="px-6 py-8 flex flex-wrap gap-6"
             >
               <img
                 src={item?.image}
                 className="w-full h-60 object-cover rounded object-top"
-                alt={item?.alt}
+                alt={item?.alt || `Hình ảnh demo dự án ${item.title}`}
               />
               <div className="w-full flex items-center flex-wrap gap-2 mt-2 h-12 justify-center">
                 {item?.tags?.map((tag) => (
@@ -78,7 +82,12 @@ function NextJS({ projectsNextJS }) {
 
       {/* Modal */}
       {isModalOpen && selectedProject && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+        >
           <div
             ref={modalRef}
             className="bg-[#252525] p-6 rounded-lg lg:w-4/6 w-11/12 shadow-lg relative"
@@ -86,6 +95,7 @@ function NextJS({ projectsNextJS }) {
             <button
               onClick={closeModal}
               className="absolute top-2 right-2 text-white hover:text-gray-600"
+              aria-label="Đóng thông tin dự án"
             >
               ✕
             </button>
@@ -94,7 +104,7 @@ function NextJS({ projectsNextJS }) {
                 <img
                   src={selectedProject.image}
                   className="w-full lg:h-auto h-60 object-cover rounded object-top"
-                  alt={selectedProject.alt}
+                  alt={selectedProject.alt || `Hình ảnh demo dự án ${selectedProject.title}`}
                 />
               </div>
               <div className="lg:w-2/3 w-full text-neutral-900 h-[42vh]">
@@ -109,7 +119,10 @@ function NextJS({ projectsNextJS }) {
                   ))}
                 </div>
                 <div className="w-full flex flex-col flex-wrap gap-2 my-4">
-                  <p className="text-xl font-semibold text-[#b1b2b3] line-clamp-2">
+                  <p
+                    id="modal-title"
+                    className="text-xl font-semibold text-[#b1b2b3] line-clamp-2"
+                  >
                     {selectedProject?.title}
                   </p>
                   <p className="text-xs text-[#b1b2b380]">
@@ -125,8 +138,10 @@ function NextJS({ projectsNextJS }) {
             <div className="flex justify-end">
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href={selectedProject?.webapp}
                 className="py-4 px-6 bg-transparent hover:bg-[#432479] transition duration-300 ease-in-out rounded"
+                aria-label={`Xem website dự án ${selectedProject.title}`}
               >
                 <button>View Website</button>
               </a>
