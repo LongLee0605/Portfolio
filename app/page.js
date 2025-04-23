@@ -33,7 +33,7 @@ export const metadata = {
     siteName: "Lê Trần Đăng Long Portfolio",
     images: [
       {
-        url: "./image/cvImage.png",
+        url: "https://letrandanglong.vercel.app/image/cvImage.png",
         alt: "Ảnh đại diện portfolio Lê Trần Đăng Long – Junior Frontend Developer",
       },
     ],
@@ -44,7 +44,7 @@ export const metadata = {
     title: "Lê Trần Đăng Long – Junior Frontend Developer | Portfolio cá nhân",
     description:
       "Khám phá các dự án, kỹ năng và kinh nghiệm nổi bật của Lê Trần Đăng Long – Junior Frontend Developer.",
-    images: ["https://letrandanglong.vercel.app/cvImage.png"],
+    images: ["https://letrandanglong.vercel.app/image/cvImage.png"],
   },
   alternates: {
     canonical: "https://letrandanglong.vercel.app/",
