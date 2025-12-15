@@ -133,7 +133,7 @@ function NextJS({ projectsNextJS }) {
                     {selectedProject?.date}
                   </p>
                   <div
-                    className="mt-2 text-[#b1b2b3] text-left lg:h-[25vh] h-[20vh] overflow-y-auto modal-content"
+                    className="mt-2 text-[#b1b2b3] text-left h-[21vh] overflow-y-auto modal-content"
                     dangerouslySetInnerHTML={{ __html: selectedProject?.ido }}
                   />
                 </div>
