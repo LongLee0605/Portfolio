@@ -3,11 +3,7 @@ import React from "react";
 class TypeWriter extends React.PureComponent {
   constructor(props) {
     super(props);
-
-    this.state = {
-      text: "",
-    };
-
+    this.state = { text: "" };
     this.tick = this.tick.bind(this);
   }
 
@@ -24,9 +20,7 @@ class TypeWriter extends React.PureComponent {
   }
 
   tick() {
-    if (this.unmounted) {
-      return;
-    }
+    if (this.unmounted) return;
 
     const { data: toRotate } = this.props;
     const i = this.loopNum % toRotate.length;
@@ -40,10 +34,7 @@ class TypeWriter extends React.PureComponent {
     }
 
     let delta = 200 - Math.random() * 100;
-
-    if (this.isDeleting) {
-      delta /= 2;
-    }
+    if (this.isDeleting) delta /= 2;
 
     if (!this.isDeleting && newText === fullTxt) {
       delta = this.period;
@@ -55,10 +46,7 @@ class TypeWriter extends React.PureComponent {
     }
 
     this.setState({ text: newText });
-
-    setTimeout(() => {
-      this.tick();
-    }, delta);
+    setTimeout(() => this.tick(), delta);
   }
 
   render() {

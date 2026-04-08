@@ -1,4 +1,3 @@
-// data
 export const Bio = {
   title: "Hello, I am D.Long",
   roles: ["FrontEnd Developer", "Wordpress Developer"],
@@ -91,7 +90,6 @@ export const Bio = {
     },
   ],
 };
-// skill
 export const Skill = [
   {
     title: "Main Skill",
